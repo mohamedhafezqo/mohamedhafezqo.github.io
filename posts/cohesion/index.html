@@ -46,7 +46,14 @@
 		</div>
 
 		<div class="markdown">
-			<h2 id="what-is-cohesion">What is Cohesion?</h2>
+			<p>Our main topic for this series is <strong>how to write a good software</strong> with these quote</p>
+<blockquote>
+<p>The good software is high cohesion and loose coupling (Separation Of Concern).</p>
+</blockquote>
+<p>But what is the benifit from writing a good software</p>
+<h2 id="maintainable-testable-and-readable-code">Maintainable, testable and readable Code</h2>
+<p>Writing maintainable code helps increase productivity for us as a developers. Having highly maintainable code makes it easier to design new features and write code. Modular, component-based, and layered code increases productivity and reduces risk and cost when making changes.</p>
+<h2 id="what-is-cohesion">What is Cohesion?</h2>
 <p>In software design is the degree of each elements in a class belongs together.</p>
 <h2 id="what-is-cohesion-types">What is Cohesion types?</h2>
 <ol>
@@ -67,6 +74,17 @@
 <p>The point is having classes the less elements we have a greate possibility for using them to be used in all the methods.</p>
 </li>
 </ul>
+<h3 id="examples">Examples:</h3>
+<ul>
+<li>Swiss watch each gear/piece SOLID and designed to do one thing.</li>
+<li>Your smart phone you can use one app while installing, updating, and/or uninstalling another! That each app is self-contained is highly cohesive.</li>
+</ul>
+<h3 id="the-benefits-of-high-cohesion-are">The benefits of high cohesion are:</h3>
+<ul>
+<li><strong>Readability</strong> : (closely) related functions are contained in a single object.</li>
+<li><strong>Maintainability</strong> : debugging tends to be contained in a single object.</li>
+<li><strong>Reusability</strong> : classes that have less elements and concentrated functionalities are not polluted with useless functions.</li>
+</ul>
 <hr>
 <ol start="2">
 <li><strong>Sequential cohesion</strong>: is when parts of a class are grouped because the output from one part is the input to another part like an assembly line (e.g., a function which reads data from a file and processes the data).</li>
@@ -79,7 +97,7 @@
 <p>3- <strong>Communicational/informational cohesion</strong>: is when parts of a module are grouped because they operate on the same data.</p>
 <p><img src="/posts/images/cohesion/communicational-informational-data_cohesion.jpg" alt="communicational/informational cohesion" title="communicational/informational cohesion"></p>
 <p><img src="/posts/images/cohesion/communicational_cohesion.png" alt="communicational/informational cohesion" title="communicational/informational cohesion"></p>
-<h3 id="examples">Examples:</h3>
+<h3 id="examples-1">Examples:</h3>
 <ul>
 <li>Update record in database and send it to the printer</li>
 </ul>
@@ -93,7 +111,7 @@ record-&gt;Print()
 <p>4- <strong>Procedural cohesion</strong>: is when parts of a module are grouped because they always follow a certain sequence of execution (e.g., a function which checks file permissions and then opens the file).</p>
 <p><img src="/posts/images/cohesion/procedural_cohesion.jpg" alt="procedural cohesion" title="procedural cohesion"></p>
 <p><img src="/posts/images/cohesion/procedural_cohesion.png" alt="procedural cohesion" title="procedural cohesion"></p>
-<h3 id="examples-1">Examples:</h3>
+<h3 id="examples-2">Examples:</h3>
 <ul>
 <li>Update record in database and send it to the printer</li>
 </ul>
@@ -128,19 +146,8 @@ $db-&gt;Store()
 <li>Break into seperated classes each performing one task.</li>
 </ul>
 <hr>
-<h3 id="the-benefits-of-high-cohesion-are">The benefits of high cohesion are:</h3>
-<ul>
-<li><strong>Readability</strong> : (closely) related functions are contained in a single object.</li>
-<li><strong>Maintainability</strong> : debugging tends to be contained in a single object.</li>
-<li><strong>Reusability</strong> : classes that have less elements and concentrated functionalities are not polluted with useless functions.</li>
-</ul>
-<h3 id="example">Example:</h3>
-<ul>
-<li>Swiss watch each gear/piece SOLID and designed to do one thing.</li>
-<li>Your smart phone you can use one app while installing, updating, and/or uninstalling another! That each app is self-contained is highly cohesive.</li>
-</ul>
 <!-- raw HTML omitted -->
-<p>These are a simple insight to know if your object is low in cohensivnees:</p>
+<h3 id="low-cohesion-insight-detector">Low cohesion insight detector:</h3>
 <ul>
 <li>Case 1: Your object has more than one responsibility.</li>
 <li>Case 2: Your object has methods are not related to the class at all.</li>
@@ -155,13 +162,6 @@ $db-&gt;Store()
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p>Our main topic for this series is <strong>how to write a good software</strong> with this quote</p>
-<blockquote>
-<p>The good software is high cohesion and loose coupling.</p>
-</blockquote>
-<p>But what is the benifit from writing a good software</p>
-<h2 id="maintainable-testable-and-readable-code">Maintainable, testable and readable Code</h2>
-<p>Writing maintainable code helps increase productivity for us as a developers. Having highly maintainable code makes it easier to design new features and write code. Modular, component-based, and layered code increases productivity and reduces risk and cost when making changes.</p>
 
 		</div>
 

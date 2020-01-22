@@ -17,8 +17,10 @@
       <pubDate>Sat, 12 Oct 2019 00:00:06 +0200</pubDate>
       
       <guid>/mohamedhafezqo.github.io/posts/cohesion/</guid>
-      <description>What is Cohesion? In software design is the degree of each elements in a class belongs together.
-What is Cohesion types?  Functional cohesion (best): This is high cohesion and that mean the class should be self-contained and with a single purpose in other words the class should do one thing and one thing very well. High cohesion is closely related to Single responsibility principle.    The elements within the object are directly related to the functionality that object is meant to provide.</description>
+      <description>Our main topic for this series is how to write a good software with these quote
+ The good software is high cohesion and loose coupling (Separation Of Concern).
+ But what is the benifit from writing a good software
+Maintainable, testable and readable Code Writing maintainable code helps increase productivity for us as a developers. Having highly maintainable code makes it easier to design new features and write code. Modular, component-based, and layered code increases productivity and reduces risk and cost when making changes.</description>
     </item>
     
   </channel>
