@@ -4,31 +4,31 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Cohesion In Object Oriented Design - Engineering Notes</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta property="og:title" content="Cohesion In Object Oriented Design" />
-<meta property="og:description" content="Cohesion in software design is the degree of each elements in a class belongs together." />
+<meta property="og:description" content="Cohesion in software design is the degree to which the elements of a certain class belong together." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/mohamedhafezqo.github.io/posts/cohesion/" />
+<meta property="og:url" content="/posts/cohesion/" />
 <meta property="article:published_time" content="2019-10-12T00:00:06+02:00" />
 <meta property="article:modified_time" content="2019-10-12T00:00:06+02:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Cohesion In Object Oriented Design"/>
-<meta name="twitter:description" content="Cohesion in software design is the degree of each elements in a class belongs together."/>
+<meta name="twitter:description" content="Cohesion in software design is the degree to which the elements of a certain class belong together."/>
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="/mohamedhafezqo.github.io/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="/mohamedhafezqo.github.io/css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
 
 	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-	<script src="/mohamedhafezqo.github.io/js/main.js"></script>
+	<script src="/js/main.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-	<script src="/mohamedhafezqo.github.io/js/custom1.js"></script>
+	<script src="/js/custom1.js"></script>
 </head>
 
 <body>
 	<div class="container wrapper post">
 		<div class="header">
-	<h1 class="site-title"><a href="/mohamedhafezqo.github.io/">Engineering Notes</a></h1>
+	<h1 class="site-title"><a href="/">Engineering Notes</a></h1>
 	<div class="site-description"><h2>Written by <strong>Mohamed Hafez</strong> software engineer</h2><nav class="nav social">
-			<ul class="flat"><a href="https://github.com/mohamedhafezqo" title="Github"><i data-feather="github"></i></a><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></ul>
+			<ul class="flat"><a href="https://github.com/mohamedhafezqo" title="Github"><i data-feather="github"></i></a><a href="https://linkedin.com/in/mohamed-hafez-abdallah" title="Linkedin"><i data-feather="linkedin"></i></a><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></ul>
 		</nav>
 	</div>
 
@@ -46,38 +46,37 @@
 		</div>
 
 		<div class="markdown">
-			<p>Our main topic for this series is <strong>how to write a good software</strong> with these quote</p>
+			<p>Our main topic for this series is <strong>how to write good software</strong> with this quote</p>
 <blockquote>
-<p>The good software is high cohesion and loose coupling (Separation Of Concern).</p>
+<p>Good software is highly cohesive and loosely coupled (Separation Of Concern).</p>
 </blockquote>
-<h4 id="but-what-is-the-benifit-from-writing-a-good-software">But what is the benifit from writing a good software</h4>
-<h2 id="maintainable-testable-and-readable-code">Maintainable, testable and readable Code</h2>
-<p>Writing maintainable code helps increase productivity for us as a developers. Having highly maintainable code makes it easier to design new features and write code. Modular, component-based, and layered code increases productivity and reduces risk and cost when making changes.</p>
+<h2 id="what-is-the-benefit-from-writing-a-good-software">What is the benefit from writing a good software?</h2>
+<p>Writing <strong>maintainable, testable and readable</strong> code helps increase productivity for us as developers. Having highly maintainable code makes it easier to design new features and write code. Modular, component-based, and layered code increase productivity and reduce risk and cost when making changes.</p>
 <h2 id="what-is-cohesion">What is Cohesion?</h2>
-<p>In software design is the degree of each elements in a class belongs together.</p>
+<p>In software design, it is the degree to which the elements of a certain class belong together.</p>
 <h2 id="what-is-cohesion-types">What is Cohesion types?</h2>
 <ol>
-<li><strong>Functional cohesion (best)</strong>: This is high cohesion and that mean the class should be self-contained and with a single purpose in other words the class should do one thing and one thing very well. High cohesion is closely related to <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">Single responsibility principle</a>.</li>
+<li><strong>Functional cohesion (best)</strong>: This is high cohesion and that means the class should be self-contained and with a single purpose. In other words the class should do one thing and one thing very well. High cohesion is closely related to <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">Single responsibility principle</a>.</li>
 </ol>
 <p><img src="/posts/images/cohesion/functional_cohesion_high_cohesion.jpg" alt="High cohesion" title="High cohesion (best)"></p>
 <ul>
 <li>
-<p>The elements within the object are directly related to the functionality that object is meant to provide. By keeping high cohesion within our code, we end up trying DRY code and reduce duplication of knowledge in our object. We can easily design, write, and test our code since the code for the object is all located together and works together.</p>
+<p>The elements within the object are directly related to the functionality the object is meant to provide. By keeping high cohesion within our code, we end up trying DRY code and reduce duplication of knowledge in our object. We can easily design, write, and test our code since all the code for our object is located together and works together.</p>
 </li>
 <li>
-<p>High cohesion give us better designed code that is easier to maintain.</p>
+<p>High cohesion gives us better designed code that is easier to maintain.</p>
 </li>
 <li>
 <p>We cannot always make it perfect, but we can at least strive for it.</p>
 </li>
 <li>
-<p>The point is having classes the less elements we have a greate possibility for using them to be used in all the methods.</p>
+<p>The point is, while building classes the lesser the elements are, the greater the possibility for reusing them in all the methods.</p>
 </li>
 </ul>
 <h3 id="examples">Examples:</h3>
 <ul>
-<li>Swiss watch each gear/piece SOLID and designed to do one thing.</li>
-<li>Your smart phone you can use one app while installing, updating, and/or uninstalling another! That each app is self-contained is highly cohesive.</li>
+<li>Swiss watch: Each gear/piece is SOLID and designed to do one thing.</li>
+<li>Your smart phone: You can use one app while installing, updating, and/or uninstalling another! That each app is self-contained is highly cohesive.</li>
 </ul>
 <h3 id="the-benefits-of-high-cohesion-are">The benefits of high cohesion are:</h3>
 <ul>
@@ -91,7 +90,7 @@
 </ol>
 <p><img src="/posts/images/cohesion/sequential_cohesion.jpg" alt="High cohesion" title="High cohesion (best)"></p>
 <ul>
-<li>Is this case, would there be value in &ldquo;cutting&rdquo;  along the dotted line ? not necessarily&hellip; can you imagine calling &ldquo;predict target&rdquo; without having immediately prior to that called &ldquo;calculate trajectory&rdquo; to acquire the information needed by &ldquo;predict&rdquo;?  the second task needs the first.</li>
+<li>Is this case, would there be value in &ldquo;cutting&rdquo;  along the dotted line ? not necessarily&hellip; Can you imagine calling &ldquo;predict target&rdquo; without having a call to &ldquo;calculate trajectory&rdquo; immediately prior to that; to acquire the information needed by the &ldquo;predict&rdquo; task?  the second task needs the first.</li>
 </ul>
 <hr>
 <p>3- <strong>Communicational/informational cohesion</strong>: is when parts of a module are grouped because they operate on the same data.</p>
@@ -105,7 +104,7 @@
 record-&gt;Print()
 </code></pre></div><h3 id="why-is-communicational-cohesion-bad">Why is communicational cohesion bad?</h3>
 <ul>
-<li>Still lack of reusability</li>
+<li>Still lacks reusability</li>
 </ul>
 <hr>
 <p>4- <strong>Procedural cohesion</strong>: is when parts of a module are grouped because they always follow a certain sequence of execution (e.g., a function which checks file permissions and then opens the file).</p>
@@ -124,7 +123,7 @@ $db-&gt;Store()
 <li>The class is unlikely to be reusable.</li>
 </ul>
 <hr>
-<p>5- <strong>Temporal cohesion</strong>: is when parts of a module are grouped to performs <strong>a series of actions</strong> related in <strong>time</strong> (e.g., a function which is called after catching an exception which closes open files, creates an error log, and notifies the user).</p>
+<p>5- <strong>Temporal cohesion</strong>: is when parts of a module are grouped to perform <strong>a series of actions</strong> related in <strong>time</strong> (e.g., a function which is called after catching an exception which closes open files, creates an error log, and notifies the user).</p>
 <p><img src="https://media.giphy.com/media/jWexOOlYe241y/giphy.gif" alt="Temporal cohesion" title="Temporal cohesion"></p>
 <h3 id="why-is-procedural-cohesion-bad-1">Why is procedural cohesion bad?</h3>
 <ul>
@@ -136,21 +135,21 @@ $db-&gt;Store()
 <h3 id="why-is-logical-cohesion-bad">Why is logical cohesion bad?</h3>
 <ul>
 <li>The interface is difficult to understand.</li>
-<li>Difficult to reusable.</li>
+<li>Difficult to reuse.</li>
 </ul>
 <hr>
-<p>7- <strong>Coincidental cohesion (worst)</strong>: is when parts of a module are grouped arbitrarily; the only relationship between the parts is that they have been grouped together (e.g., a “Utilities” class).</p>
+<p>7- <strong>Coincidental cohesion (worst)</strong>: is when parts of a module are grouped arbitrarily; the only relationship between each part is that they have been grouped together (e.g., a “Utilities” class).</p>
 <p><img src="/posts/images/cohesion/coincidental_cohesion.jpg" alt="Low cohesion" title="Low cohesion"></p>
 <h3 id="how-to-fix-the-coincidental-cohesion">How to fix the coincidental cohesion?</h3>
 <ul>
-<li>Break into seperated classes each performing one task.</li>
+<li>Break arbitrarily grouped parts into separated classes; each of which perform one task.</li>
 </ul>
 <hr>
 <!-- raw HTML omitted -->
 <h3 id="low-cohesion-insight-detector">Low cohesion insight detector:</h3>
 <ul>
 <li>Case 1: Your object has more than one responsibility.</li>
-<li>Case 2: Your object has methods are not related to the class at all.</li>
+<li>Case 2: Your object has methods that are not related to the class at all.</li>
 <li>Case 3: Utility Class.</li>
 <li>Case 4: Hidden objects and subclasses.</li>
 </ul>

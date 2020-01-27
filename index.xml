@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Engineering Notes</title>
-    <link>/mohamedhafezqo.github.io/</link>
+    <link>/</link>
     <description>Recent content on Engineering Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 12 Oct 2019 00:00:06 +0200</lastBuildDate>
     
-	<atom:link href="/mohamedhafezqo.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Cohesion In Object Oriented Design</title>
-      <link>/mohamedhafezqo.github.io/posts/cohesion/</link>
+      <link>/posts/cohesion/</link>
       <pubDate>Sat, 12 Oct 2019 00:00:06 +0200</pubDate>
       
-      <guid>/mohamedhafezqo.github.io/posts/cohesion/</guid>
-      <description>Our main topic for this series is how to write a good software with these quote
- The good software is high cohesion and loose coupling (Separation Of Concern).
- But what is the benifit from writing a good software Maintainable, testable and readable Code Writing maintainable code helps increase productivity for us as a developers. Having highly maintainable code makes it easier to design new features and write code. Modular, component-based, and layered code increases productivity and reduces risk and cost when making changes.</description>
+      <guid>/posts/cohesion/</guid>
+      <description>Our main topic for this series is how to write good software with this quote
+ Good software is highly cohesive and loosely coupled (Separation Of Concern).
+ What is the benefit from writing a good software? Writing maintainable, testable and readable code helps increase productivity for us as developers. Having highly maintainable code makes it easier to design new features and write code. Modular, component-based, and layered code increase productivity and reduce risk and cost when making changes.</description>
     </item>
     
   </channel>
