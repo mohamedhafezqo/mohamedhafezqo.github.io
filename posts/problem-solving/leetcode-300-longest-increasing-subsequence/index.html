@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Leetcode 300 Longest Increasing Subsequence (Complete Search with DP) - Cpp - Engineering Notes</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Leetcode 300 Longest Increasing Subsequence (Complete Search with DP) - Cpp" />
+<meta property="og:description" content="Explaining in video and sharing the code." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/problem-solving/leetcode-300-longest-increasing-subsequence/" />
+<meta property="article:published_time" content="2021-02-17T23:52:20+02:00" />
+<meta property="article:modified_time" content="2021-02-17T23:52:20+02:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode 300 Longest Increasing Subsequence (Complete Search with DP) - Cpp"/>
+<meta name="twitter:description" content="Explaining in video and sharing the code."/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="/js/main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src="/js/custom1.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<base href="/">
+	<h1 class="site-title"><a href="/">Engineering Notes</a></h1>
+	<div class="site-description"><h2>Written by <strong>Mohamed Hafez</strong> software engineer @fly365.com</h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/mohamedhafezqo" title="Github"><i data-feather="github"></i></a><a href="https://linkedin.com/in/mohamed-hafez-abdallah" title="Linkedin"><i data-feather="linkedin"></i></a><a href="https://www.youtube.com/channel/UC_57Z3KC1RzGRJMBYZGJYtA" title="Youtube"><i data-feather="youtube"></i></a><a href="/index.xml" title="RSS"><i data-feather="rss"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">Leetcode 300 Longest Increasing Subsequence (Complete Search with DP) - Cpp</h1>
+			<div class="meta">Posted at &mdash; Feb 17, 2021</div>
+		</div>
+
+		<div class="markdown">
+			<p>Today I&rsquo;m going to resolve, explain and share my c++ solution for</p>
+<blockquote>
+<ol start="300">
+<li>Longest Increasing Subsequence on Leetcode</li>
+</ol>
+</blockquote>
+<p>It&rsquo;s the most popular problem in the interviews for complete search so I resolved using recursive backtracking.</p>
+<h2 id="for-video-explaining">For video explaining</h2>
+<p><a href="https://www.youtube.com/watch?v=w9ohNqO_4V4"><img src="https://img.youtube.com/vi/w9ohNqO_4V4/0.jpg" alt="Leetcode 300 Longest Increasing Subsequence"></a></p>
+<h2 id="or-jump-to-directly-to-the-code-httpsgithubcommohamedhafezqoproblem_solvingblobmasterbacktrackinglongest-increasing-subsequencecpp">Or jump to directly to <a href="https://github.com/mohamedhafezqo/problem_solving/blob/master/Backtracking/longest-increasing-subsequence.cpp">the code </a></h2>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">
+<span style="color:#719e07">class</span> <span style="color:#268bd2">Solution</span> {
+
+<span style="color:#719e07">public</span><span style="color:#719e07">:</span>
+    vector<span style="color:#719e07">&lt;</span>vector<span style="color:#719e07">&lt;</span><span style="color:#dc322f">int</span><span style="color:#719e07">&gt;&gt;</span> memo;
+<span style="color:#719e07">public</span><span style="color:#719e07">:</span>
+    <span style="color:#dc322f">int</span> lengthOfLIS(vector<span style="color:#719e07">&lt;</span><span style="color:#dc322f">int</span><span style="color:#719e07">&gt;&amp;</span> nums) {
+        <span style="color:#dc322f">int</span> length <span style="color:#719e07">=</span> nums.size();
+        memo.clear();
+        memo.resize(length<span style="color:#719e07">+</span><span style="color:#2aa198">4</span>, vector<span style="color:#719e07">&lt;</span><span style="color:#dc322f">int</span><span style="color:#719e07">&gt;</span>(length<span style="color:#719e07">+</span><span style="color:#2aa198">4</span>, <span style="color:#719e07">-</span><span style="color:#2aa198">1</span>));
+        nums.push_back((<span style="color:#dc322f">int</span>)<span style="color:#719e07">-</span><span style="color:#2aa198">10e5</span>); <span style="color:#586e75">//-10000
+</span><span style="color:#586e75"></span>
+        <span style="color:#dc322f">int</span> res <span style="color:#719e07">=</span> dfs(<span style="color:#2aa198">0</span>, length, nums);
+        nums.pop_back();
+        
+        <span style="color:#719e07">return</span> res;
+    }
+    
+    <span style="color:#dc322f">int</span> <span style="color:#268bd2">dfs</span>(<span style="color:#dc322f">int</span> pos, <span style="color:#dc322f">int</span> last, vector<span style="color:#719e07">&lt;</span><span style="color:#dc322f">int</span><span style="color:#719e07">&gt;&amp;</span> items) {
+        <span style="color:#719e07">if</span> (pos <span style="color:#719e07">==</span> items.size() <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>) {
+            <span style="color:#719e07">return</span> <span style="color:#2aa198">0</span>;
+        }
+        
+        <span style="color:#586e75">//DB
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> (memo[pos][last] <span style="color:#719e07">!=</span> <span style="color:#719e07">-</span><span style="color:#2aa198">1</span>) {
+            <span style="color:#719e07">return</span> memo[pos][last];
+        }
+        <span style="color:#586e75">//leave
+</span><span style="color:#586e75"></span>        <span style="color:#dc322f">int</span> leave <span style="color:#719e07">=</span> dfs(pos<span style="color:#719e07">+</span><span style="color:#2aa198">1</span>, last, items);
+        <span style="color:#586e75">//pick
+</span><span style="color:#586e75"></span>        <span style="color:#dc322f">int</span> pick <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>;
+        <span style="color:#719e07">if</span> (items[pos] <span style="color:#719e07">&gt;</span> items[last]) {
+            pick <span style="color:#719e07">=</span> dfs(pos<span style="color:#719e07">+</span><span style="color:#2aa198">1</span>, pos, items) <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>;
+        }
+        
+        <span style="color:#719e07">return</span> memo[pos][last] <span style="color:#719e07">=</span> max(leave, pick);
+    }
+};
+
+</code></pre></div>
+		</div>
+
+		<div class="post-tags">
+			
+				
+					<nav class="nav tags">
+							<ul class="flat">
+								
+								<li><a href="/tags/problem-solving">Problem Solving</a></li>
+								
+								<li><a href="/tags/dp">DP</a></li>
+								
+								<li><a href="/tags/leetcode">Leetcode</a></li>
+								
+								<li><a href="/tags/backtracking">Backtracking</a></li>
+								
+							</ul>
+					</nav>
+				
+			
+		</div>
+		<div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'mohamedhafezqo';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+		Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div> <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-HVK8SB8KJ2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script>feather.replace()</script>
+</body>
+</html>

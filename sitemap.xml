@@ -3,27 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/tags/backtracking/</loc>
+    <lastmod>2021-02-17T23:52:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/dp/</loc>
+    <lastmod>2021-02-17T23:52:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2021-02-17T23:52:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/leetcode/</loc>
+    <lastmod>2021-02-17T23:52:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/problem-solving/leetcode-300-longest-increasing-subsequence/</loc>
+    <lastmod>2021-02-17T23:52:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2021-02-17T23:52:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/problem-solving/</loc>
+    <lastmod>2021-02-17T23:52:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2021-02-17T23:52:20+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/cohesion/</loc>
     <lastmod>2019-10-12T00:00:06+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2019-10-12T00:00:06+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2019-10-12T00:00:06+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/software-engineering/</loc>
-    <lastmod>2019-10-12T00:00:06+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2019-10-12T00:00:06+02:00</lastmod>
   </url>
   
