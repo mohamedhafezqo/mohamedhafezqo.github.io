@@ -20,7 +20,7 @@
       <description>Today I&amp;rsquo;m going to resolve, explain and share my c++ solution for
  Longest Increasing Subsequence on Leetcode   It&amp;rsquo;s the most popular problem in the interviews for complete search so I resolved using recursive backtracking.
 For video explaining 
-Or jump to directly to the code  class Solution { public: vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; memo; public: int lengthOfLIS(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int length = nums.size(); memo.clear(); memo.resize(length+4, vector&amp;lt;int&amp;gt;(length+4, -1)); nums.push_back((int)-10e5); //-10000  int res = dfs(0, length, nums); nums.</description>
+Or jump directly to the code  class Solution { public: vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; memo; public: int lengthOfLIS(vector&amp;lt;int&amp;gt;&amp;amp; nums) { int length = nums.size(); memo.clear(); memo.resize(length+4, vector&amp;lt;int&amp;gt;(length+4, -1)); nums.push_back((int)-10e5); //-10000  int res = dfs(0, length, nums); nums.</description>
     </item>
     
     <item>
